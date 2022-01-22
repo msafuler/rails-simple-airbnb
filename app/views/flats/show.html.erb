@@ -1,0 +1,44 @@
+<%= render './navbar', flat: @flat %>
+
+<div class="map"><%= image_tag @flat.picture_url %></div>
+<div class="container">
+  <div class="row">
+    <div class="info_box col-8">
+      <div class="book_card top_card">
+        <h2><%= @flat.name %></h2>
+        <p><%= @flat.description %></p>
+      </div>
+      <div class="book_card">
+        <h3>A bit more about this flat...</h3>
+      </div>
+    </div>
+    <div class="info_box col-4">
+      <div class="book_card top_card">
+        <h3>Book this place!</h3>
+        <div class="book_form">
+          <%= form_with model: @flat do |form| %>
+           <div class="date_select">From:</div><%= form.date_field :from %>
+           <div class="date_select">To:</div><%= form.date_field :to %>
+           <%= form.submit "Book" %>
+         <% end %>
+        </div>
+      </div>
+      <div class="book_card">
+        <h3>Details</h3>
+        <ul class="icons">
+          👥 <%= @flat.number_of_guests %>
+          &euro; <%= @flat.price_per_night %>
+        </ul>
+      </div>
+      <div class="book_card">
+        <h3>Share</h3>
+        <ul class="links">
+          <li><i class="fab fa-facebook-square"></i></li>
+          <li><i class="fab fa-twitter-square"></i></li>
+          <li><i class="fab fa-pinterest-square"></i></li>
+          <li><i class="fas fa-envelope-square"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

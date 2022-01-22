@@ -1,0 +1,82 @@
+// Import your components CSS files here.
+@import "alert";
+@import "avatar";
+@import "navbar";
+
+.container {
+  margin-left: 30px;
+  padding: 30px;
+}
+
+img {
+  width: 100%;
+  height: 220px;
+}
+
+.flats {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flat_details {
+  background-color: #F8F9FA;
+  padding: 24px;
+}
+
+.flat_actions {
+  margin-bottom: 30px;
+}
+
+.flat_info {
+  border-color: #e2e2e2;
+  box-shadow: 1px #eeeaea;
+}
+
+.flats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.flat_card {
+  box-shadow: 2px 2px 2px #afaeae;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cfcfcf;
+}
+
+.flat_actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 15px;
+  text-decoration: underline;
+  margin-bottom: 0;
+}
+
+.flat_icons {
+  padding: 0;
+  margin: 0;
+}
+
+.edit a{
+  color: orange;
+
+}
+
+.remove a{
+  color: red;
+}
+
+@media(max-width: 992px) {
+  .flats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .flats {
+    grid-template-columns: 1fr;
+  }
+}

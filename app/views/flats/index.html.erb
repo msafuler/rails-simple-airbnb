@@ -1,0 +1,30 @@
+<%= render './navbar', flat: @flat %>
+
+<div class="container">
+  <h1>All our Flats (<%= @flats.count%>)</h1>
+    <div class="flats">
+      <% @flats.each_with_index do |flat, index| %>
+          <div clas="col-md-4">
+            <div class="flat_card">
+              <div class="flat_image"><%= image_tag flat.picture_url %>
+              </div>
+              <div class="flat_info">
+                <div class="flat_details">
+                  <h2><%= flat.name %></h2>
+                  <p><%= flat.address %></p>
+                  <ul class="flat_icons">
+                    👥 <%= flat.number_of_guests %>
+                    &euro; <%= flat.price_per_night %>
+                  </ul>
+                </div>
+                <div class="flat_actions">
+                  <p class="more_info"><%= link_to "More info", flat_path(flat) %></p>
+                  <p class="edit"><%= link_to "Edit", edit_flat_path(flat) %></p>
+                  <p class="remove"><%= link_to "Remove", flat_path(flat), method: "delete" %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+</div>

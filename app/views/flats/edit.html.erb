@@ -1,0 +1,40 @@
+<%= render './navbar', flat: @flat %>
+
+<div class="col-6 m-auto">
+  <div class="form_new">
+    <div class="form">
+      <h3>Add a new Flat</h1>
+      <%= form_for(@flat) do |f| %>
+        <div class="mb-3">
+          <p><%= f.label :name %></p>
+          <%= f.text_field :name %>
+        </div>
+        <div class="mb-3">
+          <p><%= f.label :address %></p>
+          <%= f.text_field :address %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :picture_url, "Picture url" %>
+          <%= f.text_field :picture_url %>
+        </div>
+        <div class="mb-3">
+          <p><%= f.label :description %></p>
+          <%= f.text_field :description %>
+        </div>
+        <div class="mb-3">
+          <p><%= f.label :number_of_guests %></p>
+          <%= f.number_field :number_of_guests, in: 2..10 %>
+        </div>
+        <div class="mb-3">
+          <p><%= f.label :price_per_night %></p>
+          <%= f.number_field :price_per_night %>
+        </div>
+        <div class="buttons">
+          <%= f.submit class: "btn btn-primary form_button"%>
+          <div class="btn btn-danger ms-2 form_button"><%= link_to "Cancel", flats_path, class: 'cancel' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

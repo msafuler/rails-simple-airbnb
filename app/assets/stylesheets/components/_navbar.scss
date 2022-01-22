@@ -1,0 +1,37 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+input[type=search] {
+  width: 120px;
+}
+
+.navbar {
+  #logo {
+  color: black;
+  font-size: large;
+  text-decoration: none;
+  }
+}
+
+.navbar {
+  .btn {
+    border-color: #c6c6c6;
+    margin-left: 5px;
+  }
+}
